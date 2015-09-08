@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-  	@user = User.find
+ 
   end
 
   def update

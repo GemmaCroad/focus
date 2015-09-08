@@ -10,12 +10,6 @@
 		<%= cl_image_upload_tag :file %>
 	</p>
 
-<!-- 	<p>
-    <label>Photographer</label>
-    <%= f.select :user_id, User.all.map { |user| [ user.name, user.id ] }, :include_blank => true %>
-  	</p> -->
-
-
 	<%= submit_tag "Add Animal" %>
 
 <% end %>	
