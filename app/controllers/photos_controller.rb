@@ -24,8 +24,10 @@ class PhotosController < ApplicationController
   def create 
     response = Cloudinary::Uploader.upload params[:file]
     @photo = Photo.create name: params[:name], image: response["url"]
+    if @current_user.photos << @photo
     redirect_to photos_path
-  end
+    end
+   end 
 
   def destroy
     photo = Photo.find params[:id]
