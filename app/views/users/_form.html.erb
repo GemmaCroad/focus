@@ -1,0 +1,27 @@
+<%= form_for @current_user, url: '/edit' do |f| %>
+<input name="_method" type="hidden" value="patch" />
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+
+    <%= f.label :password_confirmation %>
+    <%= f.text_field :password_confirmation %>
+
+    <%= f.label :hometown %>
+    <%= f.text_field :hometown %>
+
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+
+    <%= f.label :bio %>
+    <%= f.text_area :bio  %>
+
+<%= f.submit %>
+
+<% end %>

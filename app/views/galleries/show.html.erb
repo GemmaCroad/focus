@@ -1,0 +1,12 @@
+<h2> <%= @gallery.name %> </h2>
+
+<ul>
+    <p><%= image_tag @gallery.image, :class => 'feature' %> </p>
+</ul>
+
+<% @gallery.photos.each do |photo| %>
+	<%= link_to(image_tag(photo.image, :class => 'thumb'), photo) %>
+<% end %>
+
+<%= link_to'Edit', edit_gallery_path(@gallery) %> 
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,6 @@
+<h1>Photos Index</h1>
+
+<% @photo.each do |photo| %>
+  <p><%= link_to ( photo.name ) %></p>
+  <%= image_tag photo.image %>
+<% end %>

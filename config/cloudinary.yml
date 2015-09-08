@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dznzhaldo
+  api_key: '881226776916154'
+  api_secret: 8Es7reIzrqDR07_L_OL3SugQzJg
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dznzhaldo
+  api_key: '881226776916154'
+  api_secret: 8Es7reIzrqDR07_L_OL3SugQzJg
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dznzhaldo
+  api_key: '881226776916154'
+  api_secret: 8Es7reIzrqDR07_L_OL3SugQzJg
+  enhance_image_tag: true
+  static_image_support: false

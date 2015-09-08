@@ -1,0 +1,18 @@
+<h2> <%= @photo.name %> </h2>
+
+<ul>
+    <p><%= image_tag @photo.image %> </p>
+    <% if @photo.user %>
+  		<p>Photographer
+	    <a href="/users/<%= @photo.user.id %>">
+	      <%= @photo.user.name %>
+	    </a>
+<% end %>
+</ul>
+<%= link_to 'Back', users_path %>
+
+
+<% if @photo.user == @current_user %>
+<%= link_to'Edit', edit_photo_path(@photo) %> 
+<%= link_to 'Delete',  @photo, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
+<% end %>

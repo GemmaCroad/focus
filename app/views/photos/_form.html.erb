@@ -1,0 +1,21 @@
+<%= form_for @photo, multipart: do |f| %>
+
+	<p>
+		<%= label_tag "Animal Name: " %>
+		<%= text_field_tag :name %>
+	</p>	
+
+	<p>
+		<%= label_tag "Animal Image: " %>
+		<%= cl_image_upload_tag :file %>
+	</p>
+
+<!-- 	<p>
+    <label>Photographer</label>
+    <%= f.select :user_id, User.all.map { |user| [ user.name, user.id ] }, :include_blank => true %>
+  	</p> -->
+
+
+	<%= submit_tag "Add Animal" %>
+
+<% end %>	
