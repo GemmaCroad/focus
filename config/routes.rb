@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy'
 
   get '/signup' => 'users#new'
-  get '/edit' => 'users#edit'
+  # post '/edit' => 'users#edit'
+  # Do not include the above line, but leave it here to remember what you did.
   post '/users' => 'users#create'
 
 
