@@ -29,7 +29,7 @@ class PhotosController < ApplicationController
       unless (Gallery.find params[:gallery_id]).nil?
         (Gallery.find params[:gallery_id]).photos << @photo
       end
-      redirect_to photos_path
+      redirect_to galleries_path
    end 
 
   def destroy
