@@ -22,8 +22,11 @@ class GalleriesController < ApplicationController
   end
 
   def create
-   gallery = Gallery.create gallery_params
-   redirect_to gallery
+   response = Cloudinary::Uploader.upload params[:file]
+    @gallery = Gallery.create name: params[:name], image: response["url"]
+      if @current_gallery.photos << @photo
+      end  
+        redirect_to galleries_path
   end
 
   def destroy
@@ -34,6 +37,6 @@ class GalleriesController < ApplicationController
 
   private
   def gallery_params
-    params.require(:gallery).permit(:name, :image)
+    params.require(:gallery).permit(:name, :image, :file)
   end 
 end
