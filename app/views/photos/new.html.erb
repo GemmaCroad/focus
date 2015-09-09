@@ -12,8 +12,9 @@
   </p>	
 
   <p>
-     <label>Galleries</label>
-     <%= f.select :gallery_id, Gallery.all.map { |gallery| [ gallery.name, gallery.id ] }, :include_blank => true %>
+     <%= label_tag "Galleries: " %>
+     <%= select_tag :gallery_id, options_for_select(Gallery.all.map { |gallery| [ gallery.name, gallery.id ] }),
+		:include_blank => true %>
   </p>
 
   <%= submit_tag "Add Photo" %>
