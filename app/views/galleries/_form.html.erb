@@ -1,15 +1,8 @@
-<%= form_tag "/galleries", multipart: true do %>
+<%= form_for @gallery do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
 
-	<p>
-	  <%= label_tag "Gallery Name: " %>
-	  <%= text_field_tag :name %>
-	</p>	
-
-	<p>
-		<%= label_tag "Photo : " %>
-		<%= cl_image_upload_tag :file %>
-	</p>
-	
-	<%= f.submit %>
-
-<% end %>	
+  <%= f.submit "Create Gallery" %>
+<% end %>

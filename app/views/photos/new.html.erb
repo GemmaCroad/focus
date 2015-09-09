@@ -11,5 +11,10 @@
     <%= cl_image_upload_tag :file %>
   </p>	
 
+  <p>
+     <label>Galleries</label>
+     <%= f.select :gallery_id, Gallery.all.map { |gallery| [ gallery.name, gallery.id ] }, :include_blank => true %>
+  </p>
+
   <%= submit_tag "Add Photo" %>
 <% end %>
