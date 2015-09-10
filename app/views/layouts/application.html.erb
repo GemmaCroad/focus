@@ -9,10 +9,12 @@
 <body>
 
 
+<div class="container">
 <nav>
-  <%= link_to 'Home', '/' %>
+  <ul>
   <% if @current_user.present? %>
     <%= link_to "Logout #{ @current_user.name}", login_path, :method => 'delete', :data => { :confirm => 'Are you sure you wish to logout?' } %>
+    <%= link_to 'Home', '/' %>
     <%= link_to 'Browse Photos', photos_path %>
     <%= link_to 'Add A New Photo', new_photo_path %>
     <%= link_to 'Browse Galleries', galleries_path %>
@@ -20,11 +22,13 @@
     <%= link_to 'Browse Users', users_path %>
     <%= link_to 'Edit Profile', edit_user_path(@current_user) %>
   <% else %>
+  <div class="unlogged">
     <%= link_to 'Sign Up', new_user_path %>
     <%= link_to 'Login', login_path %>
+  </div>
   <% end %>
+</ul>
 </nav>
-
 
 
 <%= yield %>

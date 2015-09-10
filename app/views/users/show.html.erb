@@ -30,13 +30,20 @@
   <%= @user.bio %>
 </p>
 
-<%= link_to 'Back', users_path %>
-
 <% @user.photos.each do |user| %>
 	<%= link_to(image_tag(user.image, :class => 'thumb'), user) %>
 <% end %>
 
-<% if @user == @current_user %>
-<%= link_to'Edit', edit_user_path(@user_id) %> 
-<%= link_to 'Delete',  @user, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
-<% end %>
+<div class="user nav bar">
+    <div class="user back">
+      <%= link_to 'Back', users_path %>
+    </div>
+
+
+  <div class="user edit">
+  <% if @user == @current_user %>
+  <%= link_to'Edit', edit_user_path(@user_id) %> 
+  <%= link_to 'Delete',  @user, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
+  <% end %>
+  </div>
+</div>
