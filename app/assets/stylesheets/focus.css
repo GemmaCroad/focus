@@ -22,18 +22,11 @@ ul {
 	background: rgba(255, 255, 255, 0.7);
 	padding: 1em;
 	border-radius: 5px;
-
 }
-
-/*ul {
-	text-align: center;
-	display: inline;
-	padding: 0px 30px 20px 30px;
-	font-size: 18px;
-}*/
 
 a {
 	padding: 0px 3px 0px 3px;
+	position: left;
 }
 
 img {
@@ -58,9 +51,9 @@ img {
 	text-align: left;
 }
 
-.textarea {
+/*.textarea {
 	vertical-align: inline;
-}
+}*/
 
 html {
 	font-family: 'Signika', sans-serif;
@@ -76,19 +69,19 @@ nav {
 	border-radius: 5px;
 }
 
-form {
+/*form {
     width: 80%;
     position: center;
-}
+}*/
 
-label, input {
+/*label, input {
     display: inline-block;
 }
 
 label {
     width: 50%;
     text-align: right;
-}
+}*/
 
 html {
 	font-family: 'Signika', sans-serif;
@@ -118,5 +111,8 @@ html {
 	}
 	img {
 		max-width: auto;
+	}
+	a {
+		font-size: 12px;
 	}
 }

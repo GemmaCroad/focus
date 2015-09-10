@@ -1,4 +1,4 @@
-<h1>New Photo</h1>
+<h1>Upload A New Photo</h1>
 
 <%= form_tag "/photos", multipart: true do %>
   <p>
@@ -16,8 +16,42 @@
      <%= select_tag :gallery_id, options_for_select(Gallery.all.map { |gallery| [ gallery.name, gallery.id ] }),
 		:include_blank => true %> 
   </p>
-  
+
 <div class="submit button">
   <%= submit_tag "Add Photo" %>
 <% end %>
 </div>
+
+
+<h2>Creative Commons Licenses</h2>
+<article>
+<h3>
+What is a CC licence?
+</h3>
+<p>
+The CC licences provide a simple standardised way for individual creators, companies and institutions to share their work with others on flexible terms without infringing copyright. The licences allow users to reuse, remix and share the content legally.
+</p>
+<p>
+Offering your work under a Creative Commons licence does not mean giving up your copyright. It means permitting users to make use of your material in various ways, but only on certain conditions.	
+</p>
+
+<p>	
+<h3>Attribution BY</h3>
+This applies to every Creative Commons work. Whenever a work is copied or redistributed under a Creative Commons licence, the original creator (and any other nominated parties) must be credited and the source linked to.
+</p>
+
+<p>
+<h3>NonCommercial NC</h3>
+This applies to every Creative Commons work. Whenever a work is copied or redistributed under a Creative Commons licence, the original creator (and any other nominated parties) must be credited and the source linked to.	Lets others copy, distribute, display and perform the work for noncommercial purposes only.
+</p>
+
+<p>
+<h3>No Derivative Works ND</h3>
+Lets others distribute, display and perform only verbatim copies of the work. They may not adapt or change the work in any way.
+</p>
+
+<p>
+<h3>Share Alike SA</h3>
+Allows others to remix, adapt and build on the work, but only if they distribute the derivative works under the same the licence terms that govern the original work.
+</p>
+</article>

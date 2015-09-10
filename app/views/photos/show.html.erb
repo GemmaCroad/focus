@@ -9,10 +9,13 @@
 	    </a>
 <% end %>
 </ul>
+<p>
 <%= link_to 'Back', photos_path %>
+</p>
 
 
 <% if @photo.user == @current_user %>
 <%= link_to'Edit', edit_photo_path(@photo) %> 
 <%= link_to 'Delete',  @photo, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
 <% end %>
+
