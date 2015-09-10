@@ -1,12 +1,12 @@
 <h2> <%= @gallery.name %> </h2>
 
-<ul>
+
     <p><%= image_tag @gallery.image %> </p>
-</ul>
 
 <% @gallery.photos.each do |photo| %>
 	<%= link_to(image_tag(photo.image), photo) %>
 <% end %>
+
 
 <%= link_to 'Back', galleries_path %>
 <%= link_to 'Delete',  @user, :method => 'delete', :data => { :confirm => "Are you sure?" } %>

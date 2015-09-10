@@ -16,6 +16,8 @@
      <%= select_tag :gallery_id, options_for_select(Gallery.all.map { |gallery| [ gallery.name, gallery.id ] }),
 		:include_blank => true %> 
   </p>
-
+  
+<div class="submit button">
   <%= submit_tag "Add Photo" %>
 <% end %>
+</div>
