@@ -5,6 +5,7 @@ ul {
 	background: rgba(128, 128, 128, 0.5);
 	border-radius: 5px;
 	position: center;
+	float: left;
 }
 
 .login {
@@ -84,25 +85,31 @@ article {
 }
 
 a:hover {
-	color: #FFF;
-    background-color: #778899;
+	color: #828282;
+	font-weight: bold;
 }
 
-/*TILT*/
 .tilt {
-  -webkit-transition: all 0.9s ease;
-     -moz-transition: all 0.9s ease;
-       -o-transition: all 0.9s ease;
-      -ms-transition: all 0.9s ease;
-          transition: all 0.9s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
 }
  
 .tilt:hover {
   -webkit-transform: rotate(+5deg);
-     -moz-transform: rotate(+5deg);
-       -o-transform: rotate(+5deg);
-      -ms-transform: rotate(+5deg);
-          transform: rotate(+5deg);
+  -moz-transform: rotate(+5deg);
+  -o-transform: rotate(+5deg);
+  -ms-transform: rotate(+5deg);
+  transform: rotate(+5deg);
+}
+
+input[type=submit] {
+	padding:5px 15px; background:#A8A8A8; border:0 none;
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; 
 }
 
 @media (max-width: 500px) {
