@@ -21,11 +21,6 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @user.image %>
-</p>
-
-<p>
   <strong>Bio:</strong>
   <%= @user.bio %>
 </p>
@@ -34,10 +29,10 @@
 <% @user.photos.each do |user| %>
 	<%= link_to(image_tag(user.image, :class => 'thumb'), user) %>
 <% end %>
-  
+  <p>
   <%= link_to 'Back', users_path %>
-
   <% if @user == @current_user %>
   <%= link_to'Edit', edit_user_path(@user_id) %> 
   <%= link_to 'Delete',  @user, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
   <% end %>
+</p>

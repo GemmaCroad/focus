@@ -1,7 +1,9 @@
 <h2> <%= @photo.name %> </h2>
 
 <ul>
+	<div class="tilt pic">
     <p><%= image_tag @photo.image %> </p>
+	</div>
     <% if @photo.user %>
   		<p>Photographer
 	    <a href="/users/<%= @photo.user.id %>">
