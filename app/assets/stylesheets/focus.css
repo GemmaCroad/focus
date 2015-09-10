@@ -108,7 +108,6 @@ a:hover {
 input[type=submit] {
 	padding:5px 15px; background:#A8A8A8; border:0 none;
 	cursor: pointer;
-	-webkit-border-radius: 5px;
 	border-radius: 5px; 
 }
 

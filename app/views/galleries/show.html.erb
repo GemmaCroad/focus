@@ -6,7 +6,5 @@
 	<%= link_to(image_tag(photo.image), photo) %>
 <% end %>
 
-
-
 <%= link_to 'Back', galleries_path %>
 <%= link_to 'Delete',  @user, :method => 'delete', :data => { :confirm => "Are you sure?" } %>

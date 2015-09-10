@@ -1,4 +1,5 @@
 <h1>New Users</h1>
+
 <h2>Create an account...</h2>
 
 <%= form_for :user, url: '/users' do |f| %>
@@ -8,6 +9,6 @@
   Password: <%= f.password_field :password, placeholder: "password" %>
   Password Confirmation: <%= f.password_field :password_confirmation, placeholder: "password" %>
 
-  <%= f.submit "Submit" %>
+<%= f.submit "Submit" %>
 
 <% end %>

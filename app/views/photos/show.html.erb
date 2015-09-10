@@ -4,17 +4,15 @@
 	<div class="tilt pic">
     <p><%= image_tag @photo.image %> </p>
 	</div>
-    <% if @photo.user %>
-  		<p>Photographer
-	    <a href="/users/<%= @photo.user.id %>">
-	      <%= @photo.user.name %>
-	    </a>
-<% end %>
+    	<% if @photo.user %>
+  			<p>Photographer
+	    	<a href="/users/<%= @photo.user.id %>">
+	      	<%= @photo.user.name %>
+	    	</a>
+		<% end %>
 </ul>
-<p>
-<%= link_to 'Back', photos_path %>
-</p>
 
+<p><%= link_to 'Back', photos_path %></p>
 
 <% if @photo.user == @current_user %>
 <%= link_to'Edit', edit_photo_path(@photo) %> 
