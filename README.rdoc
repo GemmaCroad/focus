@@ -1,30 +1,14 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+FOCUS - An app that let's photographers focus on finding creative inspiration and strips out all aspects of social media common to most photo sharing websites. 
 
-Things you may want to cover:
+Database: Postgresql
+Deployed on: Heroku (https://protected-anchorage-8450.herokuapp.com/)
 
-* Ruby version
+Users need to create an account and login in to see content. Photos can be uploaded and assigned to galleries. Users can create galleries. When a user is logged in and uploads a photo it is automatically assigend to that user. Users can only delete their own content, not other peoples. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-TESTING
+Known Bugs:
+- edit photos and gallereies not working
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
